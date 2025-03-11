@@ -87,7 +87,29 @@ public class Empresa {
 
         }
     }
-    public void registrarllamada(){
+
+    public void RegistrarLlamada(String nombreCabina) {
+        for (Empresa cabina : cabinas) {
+            if (cabina.getNcabina().equalsIgnoreCase(nombreCabina)) {
+
+                int duracion = (int) (Math.random() * 10) + 1;
+
+                double costo = cabina.getPrecio() * duracion;
+
+                cabina.setNllamdas(cabina.getNllamdas() + 1);
+
+                System.out.println("Llamada registrada en la cabina: " + cabina.getNcabina());
+                System.out.println("Duración: " + duracion + " minutos");
+                System.out.println("Costo: $" + costo);
+                System.out.println("Número de llamadas realizadas: " + cabina.getNllamdas());
+                return;
+            }
+        }
+        System.out.println("No se encontró una cabina con el nombre '" + nombreCabina + "'.");
+
+
+
+
 
     }
 }

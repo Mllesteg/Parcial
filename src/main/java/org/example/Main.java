@@ -14,7 +14,7 @@ public class Main {
     while (true){
         System.out.println("1, Crear cabina");
         System.out.println("2, Slecciona una cabina local 50$, Lasrga distancia 350$,Celular 150$");
-        System.out.println("Hacer una llamada en la cabina seleccionada");
+        System.out.println("3, Hacer una llamada en la cabina seleccionada");
         //System.out.println("");
        // System.out.println("");
        // System.out.println("");
@@ -36,6 +36,9 @@ public class Main {
             break;
         case 3:
             System.out.println("Hacer una llamada en la cabina seleccionada");
+            String cabinaLlamada = scanner.nextLine();
+            op1.RegistrarLlamada(cabinaLlamada);
+            break;
 
         default:
             System.out.println("opcion invalida");
